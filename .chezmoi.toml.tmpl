@@ -1,0 +1,21 @@
+pager = "less -R"
+encryption = "gpg"
+
+[add]
+    secrets = "error"
+
+[edit]
+    command = "code"
+    args = ["--wait"]
+    apply = true
+
+[git]
+    autoCommit = true
+    autoPush = true
+
+[gpg]
+    recipient = "david.huther@pcg.com"
+
+[hooks.edit-config-template.post]
+    command = "chezmoi"
+    args = ["init"]
