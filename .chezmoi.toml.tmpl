@@ -5,7 +5,7 @@ encryption = "gpg"
     secrets = "error"
 
 [edit]
-    command = "Code - Insiders"
+    command = "code-insiders"
     args = ["--wait"]
     apply = true
 
@@ -17,5 +17,5 @@ encryption = "gpg"
     recipient = "david.huther@pcg.com"
 
 [hooks.edit-config-template.post]
-    command = "chezmoi"
     args = ["init"]
+    command = "chezmoi"
