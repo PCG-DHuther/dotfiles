@@ -1,3 +1,12 @@
 [user]
 	email = 248734066+PCG-DHuther@users.noreply.github.com
 	name = David Huther
+
+# os specific
+{{ if eq .chezmoi.os "windows"}}
+[core]
+autocrlf=true
+{{ if ne .chezmoi.os "windows"}}
+[core]
+autocrlf input
+{{ end }}
