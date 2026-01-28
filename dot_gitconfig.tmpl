@@ -6,7 +6,7 @@
 {{ if eq .chezmoi.os "windows"}}
 [core]
 autocrlf=true
-{{ if ne .chezmoi.os "windows"}}
+{{- else}}
 [core]
 autocrlf input
-{{ end }}
+{{- end }}
