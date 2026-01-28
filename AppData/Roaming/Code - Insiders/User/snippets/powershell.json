@@ -1,0 +1,276 @@
+{
+	// Place your snippets for powershell here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	//		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"AdvancedFunction" : {
+		"prefix": "function",
+		"description": "New advanced PowerShell function",
+		"body": [
+			"function ${1:Verb}-${2:Noun} {",
+			"\t[CmdletBinding()] [OutputType([${3:OutputType}])]",
+			"",
+			"\tParam(",
+			"\t\t[Parameter(Mandatory)]",
+			"\t\t[${4:ParameterType}]",
+			"\t\t$${5:ParameterName}",
+			"\t)",
+			"",
+			"\tBegin {",
+			"\t}",
+			"",
+			"\tProcess {",
+			"\t\t$0",
+			"\t}",
+			"",
+			"\tEnd {",
+			"\t}",
+			"}"
+		]
+	},
+	"PSADTExtension" : {
+		"prefix": "ADText",
+		"description": "Create a new PSADT Extension function from the official template.",
+		"body": [
+			"function ${1:Verb}-ADT${2:Noun}",
+			"{",
+			"\t<#",
+			"\t.SYNOPSIS",
+			"\t\tBasis for a new PSAppDeployToolkit extension function.",
+			"",
+			"\t.DESCRIPTION",
+			"\t\tThis function serves as the basis for a new PSAppDeployToolkit extension function.",
+			"",
+			"\t.INPUTS",
+			"\t\tNone",
+			"",
+			"\t\tYou cannot pipe objects to this function.",
+			"",
+			"\t.OUTPUTS",
+			"\t\tNone",
+			"",
+			"\t\tThis function does not return any output.",
+			"",
+			"\t.EXAMPLE",
+			"\t\t${1:Verb}-ADT${2:Noun}",
+			"",
+			"\t\tInvokes the ${1:Verb}-ADT${2:Noun} function and returns any output.",
+			"\t#>",
+			"",
+			"\t[CmdletBinding()]",
+			"\tparam",
+			"\t(",
+			"\t)",
+			"",
+			"\tbegin",
+			"\t{",
+			"\t\t# Initialize function.",
+			"\t\tInitialize-ADTFunction -Cmdlet \\$PSCmdlet -SessionState \\$ExecutionContext.SessionState",
+			"\t}",
+			"",
+			"\tprocess",
+			"\t{",
+			"\t\ttry",
+			"\t\t{",
+			"\t\t\ttry",
+			"\t\t\t{$0",
+			"\t\t\t}",
+			"\t\t\tcatch",
+			"\t\t\t{",
+			"\t\t\t\t# Re-writing the ErrorRecord with Write-Error ensures the correct PositionMessage is used.",
+			"\t\t\t\tWrite-Error -ErrorRecord \\$_",
+			"\t\t\t}",
+			"\t\t}",
+			"\t\tcatch",
+			"\t\t{",
+			"\t\t\t# Process the caught error, log it and throw depending on the specified ErrorAction.",
+			"\t\t\tInvoke-ADTFunctionErrorHandler -Cmdlet \\$PSCmdlet -SessionState \\$ExecutionContext.SessionState -ErrorRecord \\$_",
+			"\t\t}",
+			"\t}",
+			"",
+			"\tend",
+			"\t{",
+			"\t\t# Finalize function.",
+			"\t\tComplete-ADTFunction -Cmdlet \\$PSCmdlet",
+			"\t}",
+			"}"
+		]
+	},
+	"ValidatedFilePathParameter" : {
+		"prefix": "valFilePath",
+		"description": "A validated FilePath parameter.",
+		"body": [
+			"\t\t[Parameter(Mandatory)]",
+			"\t\t[ValidateScript({",
+			"\t\t\t\tTry {",
+			"\t\t\t\t\t\\$givenPath = \\$_",
+			"\t\t\t\t\t\\$resolvedPath = Resolve-Path -Path \\$givenPath -ErrorAction Stop",
+			"\t\t\t\t\tIf (-not (Test-Path -PathType Leaf -Path \\$resolvedPath)) {",
+			"\t\t\t\t\t\tThrow [Management.Automation.ValidationMetadataException]::new(\"`\"\\$givenPath`\" is not a file.\")",
+			"\t\t\t\t\t} ElseIf ([Path]::GetExtension(\\$resolvedPath) -notmatch '\\.${1:Extension}\\$') {",
+			"\t\t\t\t\t\tThrow [Management.Automation.ValidationMetadataException]::new(\"`\"\\$givenPath`\" is not a .${1:Extension} file.\")",
+			"\t\t\t\t\t} Else {",
+			"\t\t\t\t\t\t\\$true",
+			"\t\t\t\t\t}",
+			"\t\t\t\t} Catch [Management.Automation.ItemNotFoundException] {",
+			"\t\t\t\t\tThrow [Management.Automation.ItemNotFoundException]::new(\"The file `\"\\$givenPath`\" does not exist.\", \\$_.Exception)",
+			"\t\t\t\t}",
+			"\t\t\t})]",
+			"\t\t[String]\\$FilePath #,"
+		]
+	},
+	"ValidatedDirectoryPathParameter": {
+        "prefix": "valDirPath",
+		"description": "ValidatedDirectoryPathParameter",
+        "body": [
+            "[Parameter(Mandatory)]",
+            "[ValidateScript({",
+            "\t\tTry {",
+            "\t\t\t\\$givenPath = \\$_",
+            "\t\t\t\\$resolvedPath = Resolve-Path -Path \\$givenPath -ErrorAction Stop",
+            "\t\t\tIf (Test-Path -PathType Container -Path \\$resolvedPath) {\\$true} Else {",
+            "\t\t\t\tThrow [Management.Automation.ValidationMetadataException]::new(\"`\"\\$givenPath`\" is not a directory.\")",
+            "\t\t\t}",
+            "\t\t} Catch [Management.Automation.ItemNotFoundException] {",
+            "\t\t\tThrow [Management.Automation.ItemNotFoundException]::new(\"The directory `\"\\$givenPath`\" does not exist.\", \\$_.Exception)",
+            "\t\t}",
+            "})]",
+            "[String]\\$DirectoryPath,"
+        ]
+    },
+	"UsingNamespace" : {
+		"prefix": "use",
+		"description": "Add a namespace to use.",
+		"body": "Using namespace $0"
+	},
+	"Suppress_ScriptAnalyzerGeneral" : {
+		"prefix": "sprs_General",
+		"description": "Suppress a PSScriptAnalyzer rule.",
+		"body": [
+			"[$0Diagnostics.CodeAnalysis.SuppressMessageAttribute('${1:RuleName}', '', <#Target = '',#> Justification = '${2:Justification}')]"
+		]
+	},
+	"Suppress_CompatibleCommandFalsePositive" : {
+		"prefix": "sprs_CompatCommandFalsePos",
+		"description": "Suppress the PSUseCompatibleCommands/Cmdlets rule when PSScriptAnalyzer is wrong.",
+		"body": [
+			"[$0Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatible${1|Command,Cmdlet|}s', '', Target = '${2:${1}Name}', Justification = 'Go home, PSScriptAnalyzer. You are drunk.')]"
+		]
+	},
+	"Suppress_CompatibleCommandOverride" : {
+		"prefix": "sprs_CompatCommandOverride",
+		"description": "Suppress the PSUseCompatibleCommands/Cmdlets rule when specific instance can rely on a higher version.",
+		"body": [
+			"[$0Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatible${1|Command,Cmdlet|}s', '', Target = '${2:${1}Name}', Justification = 'Compatibility rules apply to package contents, not to the build script.')]"
+		]
+	},
+	"Suppress_OutOfScopeVariableUse" : {
+		"prefix" : "sprs_OutScopeVarUse",
+		"description" : "Suppress the PSUseDeclaredVarsMoreThanAssignments rule because the variable is being used in a manner or scope that PSScriptAnalyzer cannot see.",
+		"body" : [
+			"[$0Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseDeclaredVarsMoreThanAssignments', '', Target = '${1:VariableName}', Justification = 'This variable is being used in a manner or scope that PSScriptAnalyzer cannot see.')]"
+		]
+	},
+	"Suppress_OutOfScopeParameterUse" : {
+		"prefix" : "sprs_OutScopeParamUse",
+		"description" : "Suppress the PSReviewUnusedParameter rule because the parameter is being used in a manner or scope that PSScriptAnalyzer cannot see.",
+		"body" : [
+			"[$0Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSReviewUnusedParameter', '', Target = '${1:ParameterName}', Justification = 'This parameter is being used in a manner or scope that PSScriptAnalyzer cannot see.')]"
+		]
+	},
+	"SuppressArgCompleterComplaint" : {
+		"prefix" : "sprs_ArgCompleter",
+		"description" : "Suppress the PSReviewUnusedParameter rule for the required parameters of an ArgumentCompleter attribute.",
+		"body" : [
+			"[$0Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSReviewUnusedParameter', '', Target = 'commandName', Justification = 'Required by ArgumentCompleter')]",
+			"[$0Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSReviewUnusedParameter', '', Target = 'parameterName', Justification = 'Required by ArgumentCompleter')]",
+			"[$0Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSReviewUnusedParameter', '', Target = 'wordToComplete', Justification = 'Required by ArgumentCompleter')]",
+			"[$0Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSReviewUnusedParameter', '', Target = 'commandAst', Justification = 'Required by ArgumentCompleter')]",
+			"[$0Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSReviewUnusedParameter', '', Target = 'fakeBoundParameters', Justification = 'Required by ArgumentCompleter')]",
+		]
+	},
+	"ADTImportTasks" : {
+		"prefix": "schdtaskImport",
+		"description": "Reusable block calling functions to import scheduled tasks and their files from \\$adtSession.DirFiles",
+		"body": [
+			"#region ScheduledTasks",
+			"\\$localTaskDirectory = \"\\$envProgramData\\PCG\\Tasks\"",
+			"New-ADTFolder -Path \"\\$localTaskDirectory\"",
+			"Copy-ADTFile -Recurse -Path \"\\$(\\$adtSession.DirFiles)\\Scheduled Tasks\\Task Files\\*\" -Destination \"\\$localTaskDirectory\"",
+			"Get-Item -Path \"\\$(\\$adtSession.DirFiles)\\Scheduled Tasks\\Definitions\\*.xml\" | ForEach-Object {Import-ADTScheduledTaskFile -Overwrite -File \\$_}",
+			"#endregion ScheduledTasks"
+		]
+	},
+	"PesterDotSourceControl" : {
+		"prefix": "pesterDotSourceControl",
+		"description": "Control statement to exit a script before logic region if the script was dot-sourced.",
+		"body": [
+			"#region control",
+			"If (\\$MyInvocation.InvocationName -eq '.') {",
+			"\tIf (\\$MyInvocation.ScriptName -notlike '*.Tests.ps1') {",
+			"\t\tWrite-Warning -Message \"To run this script's logic, use the `\"&`\" operator. Dot-sourcing is reserved for testing purposes.\"",
+			"\t}",
+			"\tExit 0",
+			"}",
+			"#endregion control"
+		]
+	},
+	"SuppressWriteHostForIntuneScript" : {
+		"prefix": "sprs_wrtHostIntune",
+		"description": "Suppress",
+		"body": [
+			"[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingWriteHost', '', Justification = 'Intune detection scripts require stdout and Write-Host is the recommended method.')]"
+		]
+	},
+	"Example_WorkloadValidation" : {
+		"prefix": "exmpl_WorkloadValidation",
+		"description": "A",
+		"body": [
+			"function Open-Bitmap {",
+			"",
+			"\t[CmdletBinding()] [OutputType([Bitmap])]",
+			"",
+			"\t[SuppressMessageAttribute('PSReviewUnusedParameter', '', Target = 'FilePath', Justification = 'This parameter is being used in a manner or scope that PSScriptAnalyzer cannot see.')]",
+			"",
+			"\tParam(",
+			"\t\t[Parameter(Mandatory, ValueFromPipeline)]",
+			"\t\t[ValidateScript({",
+			"\t\t\t\tTry {",
+			"\t\t\t\t\t\\$givenPath = \\$_",
+			"\t\t\t\t\t\\$resolvedPath = Resolve-Path -Path \\$givenPath -ErrorAction Stop",
+			"\t\t\t\t\tIf (Get-Item -Path \\$_ | Select-Object -ExpandProperty PSIsContainer) {",
+			"\t\t\t\t\t\tThrow [ValidationMetadataException]::new(\"`\"\\$givenPath`\" is not a file.\")",
+			"\t\t\t\t\t} Else {",
+			"\t\t\t\t\t\t\\$workloadTag = [Path]::GetFileNameWithoutExtension(\\$givenPath)",
+			"\t\t\t\t\t\tTry {",
+			"\t\t\t\t\t\t\tSet-Variable -PassThru -Scope 1 -Name \"Bitmap_\\$workloadTag\" -Value \\$([Bitmap]::FromFile(\\$resolvedPath)) | ForEach-Object -Process {[Boolean]\\$_}",
+			"\t\t\t\t\t\t} Catch {",
+			"\t\t\t\t\t\t\tThrow [ValidationMetadataException]::new(\"`\"\\$givenPath`\" could not be opened as a bitmap object.\", \\$_.Exception)",
+			"\t\t\t\t\t\t}",
+			"\t\t\t\t\t}",
+			"\t\t\t\t} Catch [ItemNotFoundException] {",
+			"\t\t\t\t\tThrow [ItemNotFoundException]::new(\"The file `\"\\$givenPath`\" does not exist.\", \\$_.Exception)",
+			"\t\t\t\t}",
+			"\t\t\t})]",
+			"\t\t[String[]]\\$FilePath",
+			"\t)",
+			"",
+			"\tProcess {",
+			"\t\tForeach (\\$f in \\$FilePath) {",
+			"\t\t\t\\$validationWorkloadId = \"Bitmap_\\$([Path]::GetFileNameWithoutExtension(\\$f))\"",
+			"\t\t\tGet-Variable -ValueOnly -Name \\$validationWorkloadId",
+			"\t\t}",
+			"\t}",
+			"}"
+	]
+}
+}
