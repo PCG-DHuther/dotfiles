@@ -9,4 +9,7 @@ autocrlf=true
 {{- else}}
 [core]
 autocrlf input
+#{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+	# WSL-specific code
+#{{   end }}
 {{- end }}
