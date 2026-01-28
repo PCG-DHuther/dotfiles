@@ -1,0 +1,7 @@
+[
+    {
+        "key": "ctrl+shift+r",
+        "command": "-workbench.view.extension.thunder-client",
+        "when": "viewContainer.workbench.view.extension.thunder-client.enabled"
+    }
+]
