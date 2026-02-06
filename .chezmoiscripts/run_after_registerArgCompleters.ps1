@@ -140,13 +140,16 @@ function Get-ArgumentCompleter {
     }
 }
 
+<#
+# This doesn't work as well as I would like for some reason.
 function Update-CarapaceRegistration {
+
     [CmdletBinding()] [OutputType([Void])] Param()
 
     [Hashtable]$onlyOverlap = @{
         IncludeEqual     = $true
         ExcludeDifferent = $true
-        ReferenceObject  = & carapace --list | Foreach-Object { $_.Split(' ')[0] }
+        ReferenceObject  = & carapace --list | ForEach-Object { $_.Split(' ')[0] }
         DifferenceObject = Get-Command -CommandType Application | ForEach-Object { [IO.Path]::GetFileNameWithoutExtension($_.Name) }
     }
 
@@ -159,4 +162,25 @@ function Update-CarapaceRegistration {
         & carapace $_.InputObject powershell | Out-String | Invoke-Expression
     }
 }
+#>
 #endregion functions
+
+#region logic
+If ($argumentCompleterList -notcontains 'dsc') { & dsc completer powershell | Out-String | Invoke-Expression }
+
+#Update-CarapaceRegistration
+& carapace _carapace powershell | Out-String | Invoke-Expression
+
+# Install vincent
+New-Item -ItemType Directory -Path "$env:UserProfile\bin\" | Foreach-Object {
+    $destinationArchive = Join-Path -Path $_ -ChildPath 'vincent_windows_amd64.zip'
+    $destinationDirectory = Join-Path -Path $_ -ChildPath 'vincent'
+    Invoke-WebRequest -Uri 'https://github.com/rsteube/vincent/releases/download/v0.1.4/vincent_windows_amd64.zip' -OutFile $destinationArchive
+    Expand-Archive -Force -Path $destinationArchive -DestinationPath $destinationDirectory
+    [Environment]::SetEnvironmentVariable('Path', $("${env:path};$destinationDirectory"), [EnvironmentVariableTarget]::User)
+    Push-Location -Path $destinationDirectory
+    & .\vincent _carapace | Out-String | Invoke-Expression
+    Pop-Location
+}
+
+#endregion logic

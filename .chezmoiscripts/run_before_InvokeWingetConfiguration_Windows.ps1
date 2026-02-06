@@ -1,1 +1,1 @@
-& winget configure --file
+#& winget configure --file
