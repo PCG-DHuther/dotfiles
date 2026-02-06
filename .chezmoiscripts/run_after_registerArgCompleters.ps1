@@ -169,10 +169,16 @@ function Update-CarapaceRegistration {
 If ($argumentCompleterList -notcontains 'dsc') { & dsc completer powershell | Out-String | Invoke-Expression }
 
 #Update-CarapaceRegistration
+& starship completers powershell | Out-String | Invoke-Expression
 & carapace _carapace powershell | Out-String | Invoke-Expression
 
 # Install vincent
-New-Item -ItemType Directory -Path "$env:UserProfile\bin\" | Foreach-Object {
+Join-Path -Path $env:UserProfile -ChildPath 'bin' | Foreach-Object {
+    Try {
+        Get-Item -Path $_ -ErrorAction Stop | Out-Null
+    } Catch {
+        New-Item -Path $_ -ItemType Directory -ErrorAction Stop | Out-Null
+    }
     $destinationArchive = Join-Path -Path $_ -ChildPath 'vincent_windows_amd64.zip'
     $destinationDirectory = Join-Path -Path $_ -ChildPath 'vincent'
     Invoke-WebRequest -Uri 'https://github.com/rsteube/vincent/releases/download/v0.1.4/vincent_windows_amd64.zip' -OutFile $destinationArchive
