@@ -169,7 +169,7 @@ function Update-CarapaceRegistration {
 If ($argumentCompleterList -notcontains 'dsc') { & dsc completer powershell | Out-String | Invoke-Expression }
 
 #Update-CarapaceRegistration
-& starship completers powershell | Out-String | Invoke-Expression
+& starship completions powershell | Out-String | Invoke-Expression
 & carapace _carapace powershell | Out-String | Invoke-Expression
 
 # Install vincent
