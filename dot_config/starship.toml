@@ -37,24 +37,10 @@ style = "bg:red fg:crust"
 [os.symbols]
 Windows = ""
 Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
 Macos = "󰀵"
-Manjaro = ""
 Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
 Alpine = ""
-Amazon = ""
-Android = ""
-AOSC = ""
-Arch = "󰣇"
-Artix = "󰣇"
-CentOS = ""
 Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
@@ -69,11 +55,13 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
+"OneDrive" = "󰏊"
+"Performance Contracting Group" = "PCG"
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = "󰝚"
+"Pictures" = ""
+"Developer" = "󰲋"
 
 [git_branch]
 symbol = ""

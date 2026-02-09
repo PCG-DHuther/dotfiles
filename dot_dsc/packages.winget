@@ -6,22 +6,6 @@ metadata:
     processor:
       identifier: dscv3
 resources:
-- name: Microsoft.WinGet/UserSettingsFile-0
-  type: Microsoft.WinGet/UserSettingsFile
-  properties:
-    settings: {}
-- name: Microsoft.WinGet/AdminSettings-0
-  type: Microsoft.WinGet/AdminSettings
-  metadata:
-    winget:
-      securityContext: "elevated"
-  properties:
-    settings:
-      LocalManifestFiles: false
-      ProxyCommandLineOptions: false
-      BypassCertificatePinningForMicrosoftStore: false
-      InstallerHashOverride: false
-      LocalArchiveMalwareScanOverride: false
 - name: winget_Microsoft.PowerShell
   type: Microsoft.WinGet/Package
   metadata:
@@ -45,13 +29,6 @@ resources:
   properties:
     id: "Greenshot.Greenshot"
     source: "winget"
-- name: winget_Notepad++.Notepad++
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Notepad++.Notepad++"
-  properties:
-    id: "Notepad++.Notepad++"
-    source: "winget"
 - name: winget_Nushell.Nushell
   type: Microsoft.WinGet/Package
   metadata:
@@ -66,26 +43,12 @@ resources:
   properties:
     id: "7zip.7zip"
     source: "winget"
-- name: winget_dotPDN.PaintDotNet
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install dotPDN.PaintDotNet"
-  properties:
-    id: "dotPDN.PaintDotNet"
-    source: "winget"
 - name: winget_MSEndpointMgr.IntuneDebugToolkit
   type: Microsoft.WinGet/Package
   metadata:
     description: "Install MSEndpointMgr.IntuneDebugToolkit"
   properties:
     id: "MSEndpointMgr.IntuneDebugToolkit"
-    source: "winget"
-- name: winget_InstEd.InstEd
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install InstEd.InstEd"
-  properties:
-    id: "InstEd.InstEd"
     source: "winget"
 - name: winget_MasterPackager.MasterPackager
   type: Microsoft.WinGet/Package
@@ -121,13 +84,6 @@ resources:
     description: "Install Starship.Starship"
   properties:
     id: "Starship.Starship"
-    source: "winget"
-- name: winget_Obsidian.Obsidian
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Obsidian.Obsidian"
-  properties:
-    id: "Obsidian.Obsidian"
     source: "winget"
 - name: winget_rsteube.Carapace
   type: Microsoft.WinGet/Package
