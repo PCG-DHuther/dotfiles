@@ -1,0 +1,166 @@
+# Created with WinGet Studio - v0.100.329.0
+
+$schema: https://raw.githubusercontent.com/PowerShell/DSC/main/schemas/2023/08/config/document.json
+metadata:
+  winget:
+    processor:
+      identifier: dscv3
+resources:
+- name: Microsoft.WinGet/UserSettingsFile-0
+  type: Microsoft.WinGet/UserSettingsFile
+  properties:
+    settings: {}
+- name: Microsoft.WinGet/AdminSettings-0
+  type: Microsoft.WinGet/AdminSettings
+  metadata:
+    winget:
+      securityContext: "elevated"
+  properties:
+    settings:
+      LocalManifestFiles: false
+      ProxyCommandLineOptions: false
+      BypassCertificatePinningForMicrosoftStore: false
+      InstallerHashOverride: false
+      LocalArchiveMalwareScanOverride: false
+- name: winget_Microsoft.PowerShell
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install Microsoft.PowerShell
+  properties:
+    id: Microsoft.PowerShell
+    source: winget
+- name: winget_AutoHotkey.AutoHotkey
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install AutoHotkey.AutoHotkey"
+  properties:
+    id: "AutoHotkey.AutoHotkey"
+    source: "winget"
+  winget:
+      securityContext: "elevated"
+- name: winget_Greenshot.Greenshot
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Greenshot.Greenshot"
+  properties:
+    id: "Greenshot.Greenshot"
+    source: "winget"
+- name: winget_Notepad++.Notepad++
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Notepad++.Notepad++"
+  properties:
+    id: "Notepad++.Notepad++"
+    source: "winget"
+- name: winget_Nushell.Nushell
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Nushell.Nushell"
+  properties:
+    id: "Nushell.Nushell"
+    source: "winget"
+- name: winget_7zip.7zip
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install 7zip.7zip"
+  properties:
+    id: "7zip.7zip"
+    source: "winget"
+- name: winget_dotPDN.PaintDotNet
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install dotPDN.PaintDotNet"
+  properties:
+    id: "dotPDN.PaintDotNet"
+    source: "winget"
+- name: winget_MSEndpointMgr.IntuneDebugToolkit
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install MSEndpointMgr.IntuneDebugToolkit"
+  properties:
+    id: "MSEndpointMgr.IntuneDebugToolkit"
+    source: "winget"
+- name: winget_InstEd.InstEd
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install InstEd.InstEd"
+  properties:
+    id: "InstEd.InstEd"
+    source: "winget"
+- name: winget_MasterPackager.MasterPackager
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install MasterPackager.MasterPackager"
+  properties:
+    id: "MasterPackager.MasterPackager"
+    source: "winget"
+- name: winget_GitTools.GitVersion
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install GitTools.GitVersion"
+  properties:
+    id: "GitTools.GitVersion"
+    source: "winget"
+- name: winget_Microsoft.Sysinternals.Suite
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Microsoft.Sysinternals.Suite"
+  properties:
+    id: "Microsoft.Sysinternals.Suite"
+    source: "winget"
+- name: winget_NirSoft.RegistryChangesView
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install NirSoft.RegistryChangesView"
+  properties:
+    id: "NirSoft.RegistryChangesView"
+    source: "winget"
+- name: winget_Starship.Starship
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Starship.Starship"
+  properties:
+    id: "Starship.Starship"
+    source: "winget"
+- name: winget_Obsidian.Obsidian
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Obsidian.Obsidian"
+  properties:
+    id: "Obsidian.Obsidian"
+    source: "winget"
+- name: winget_rsteube.Carapace
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install rsteube.Carapace"
+  properties:
+    id: "rsteube.Carapace"
+    source: "winget"
+- name: winget_twpayne.chezmoi
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install twpayne.chezmoi"
+  properties:
+    id: "twpayne.chezmoi"
+    source: "winget"
+- name: winget_Microsoft.VisualStudioCode.Insiders
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Microsoft.VisualStudioCode.Insiders"
+  properties:
+    id: "Microsoft.VisualStudioCode.Insiders"
+    source: "winget"
+- name: winget_Microsoft.PowerToys
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Microsoft.PowerToys"
+  properties:
+    id: "Microsoft.PowerToys"
+    source: "winget"
+- name: winget_Microsoft.WindowsTerminal
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Microsoft.WindowsTerminal"
+  properties:
+    id: "Microsoft.WindowsTerminal"
+    source: "winget"
