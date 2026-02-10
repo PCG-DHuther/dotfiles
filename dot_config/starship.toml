@@ -55,8 +55,8 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
+"OneDrive - Performance Contracting Group" = "󰏊|PCG"
 "OneDrive" = "󰏊"
-"Performance Contracting Group" = "PCG"
 "Documents" = "󰈙"
 "Downloads" = ""
 "Music" = "󰝚"

@@ -1,7 +1,8 @@
+Using namespace System.IO
 Using namespace System.Management.Automation
 
 Try {
-    Join-Path -Path $env:UserProfile -ChildPath .dsc | Join-Path -ChildPath packages.winget | Resolve-Path -ErrorAction Stop |
+    [Path]::Combine($env:UserProfile, '.dsc', 'packages.winget') | Resolve-Path -ErrorAction Stop |
         ForEach-Object {
             & winget configure --file "${_}" --accept-configuration-agreements
         }
