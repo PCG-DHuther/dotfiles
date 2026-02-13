@@ -37,7 +37,7 @@ resources:
     winget:
       securityContext: elevated
 - type: Microsoft.WinGet/Package
-  name: winget_Microsoft.WSL
+  name: winget_WSL
   properties:
     id: Microsoft.WSL
     installMode: silent
@@ -174,7 +174,7 @@ resources:
 - type: Microsoft.WinGet/Package
   name: winget_Debian
   dependsOn:
-  - winget_Microsoft.WSL
+  - winget_WSL
   properties:
     id: Debian.Debian
     installMode: silent
@@ -185,7 +185,7 @@ resources:
 - type: Microsoft.WinGet/Package
   name: winget_AlpineWSL
   dependsOn:
-  - winget_Microsoft.WSL
+  - winget_WSL
   properties:
     id: 9P804CRF0395
     installMode: silent
