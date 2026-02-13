@@ -1,0 +1,189 @@
+# Created with WinGet Studio - v0.100.329.0
+
+$schema: https://raw.githubusercontent.com/PowerShell/DSC/main/schemas/2023/08/config/document.json
+metadata:
+  winget:
+    processor:
+      identifier: dscv3
+resources:
+- name: winget_PowerShell
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install PowerShell
+  properties:
+    id: Microsoft.PowerShell
+    source: winget
+    acceptAgreements: true
+  winget:
+      securityContext: "elevated"
+- name: winget_AutoHotkey.AutoHotkey
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install AutoHotkey"
+  properties:
+    id: "AutoHotkey.AutoHotkey"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_Greenshot
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Greenshot"
+  properties:
+    id: "Greenshot.Greenshot"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_Nushell
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Nushell"
+  properties:
+    id: "Nushell.Nushell"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_7zip.7zip
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install 7zip"
+  properties:
+    id: "7zip.7zip"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_IntuneDebugToolkit
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install IntuneDebugToolkit"
+  properties:
+    id: "MSEndpointMgr.IntuneDebugToolkit"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_MasterPackager
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install MasterPackager"
+  properties:
+    id: "MasterPackager.MasterPackager"
+    source: "winget"
+    acceptAgreements: true
+  winget:
+      securityContext: "elevated"
+- name: winget_GitVersion
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install GitVersion"
+  properties:
+    id: "GitTools.GitVersion"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_SysinternalsSuite
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Sysinternals Suite"
+  properties:
+    id: "Microsoft.Sysinternals.Suite"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_RegistryChangesView
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install RegistryChangesView"
+  properties:
+    id: "NirSoft.RegistryChangesView"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_UninstallView
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install UninstallView"
+  properties:
+    id: "NirSoft.UninstallView"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_Starship
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Starship"
+  properties:
+    id: "Starship.Starship"
+    source: "winget"
+    acceptAgreements: true
+  winget:
+    securityContext: "elevated"
+- name: winget_rsteube.Carapace
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Carapace"
+  properties:
+    id: "rsteube.Carapace"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_twpayne.chezmoi
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install chezmoi"
+  properties:
+    id: "twpayne.chezmoi"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_VSCodeInsiders
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install VS Code Insiders"
+  properties:
+    id: "Microsoft.VisualStudioCode.Insiders"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_PowerToys
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Microsoft PowerToys"
+  properties:
+    id: "Microsoft.PowerToys"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_WindowsTerminal
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Windows Terminal"
+  properties:
+    id: "Microsoft.WindowsTerminal"
+    source: "winget"
+- name: winget_Microsoft.WSL
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Windows Subsystem for Linux"
+  properties:
+    id: "Microsoft.WSL"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_Debian
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Debian WSL"
+  properties:
+    id: "Debian.Debian"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+- name: winget_AlpineWSL
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Alpine WSL"
+  properties:
+    id: "9P804CRF0395"
+    installMode: silent
+    source: "msstore"
+    acceptAgreements: true
