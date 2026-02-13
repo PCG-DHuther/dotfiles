@@ -16,6 +16,26 @@ resources:
     acceptAgreements: true
   winget:
       securityContext: "elevated"
+- name: winget_Starship
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Starship"
+  properties:
+    id: "Starship.Starship"
+    source: "winget"
+    acceptAgreements: true
+  winget:
+    securityContext: "elevated"
+- name: winget_MasterPackager
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install MasterPackager"
+  properties:
+    id: "MasterPackager.MasterPackager"
+    source: "winget"
+    acceptAgreements: true
+  winget:
+      securityContext: "elevated"
 - name: winget_AutoHotkey.AutoHotkey
   type: Microsoft.WinGet/Package
   metadata:
@@ -61,16 +81,6 @@ resources:
     installMode: silent
     source: "winget"
     acceptAgreements: true
-- name: winget_MasterPackager
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install MasterPackager"
-  properties:
-    id: "MasterPackager.MasterPackager"
-    source: "winget"
-    acceptAgreements: true
-  winget:
-      securityContext: "elevated"
 - name: winget_GitVersion
   type: Microsoft.WinGet/Package
   metadata:
@@ -107,16 +117,6 @@ resources:
     installMode: silent
     source: "winget"
     acceptAgreements: true
-- name: winget_Starship
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Starship"
-  properties:
-    id: "Starship.Starship"
-    source: "winget"
-    acceptAgreements: true
-  winget:
-    securityContext: "elevated"
 - name: winget_rsteube.Carapace
   type: Microsoft.WinGet/Package
   metadata:
