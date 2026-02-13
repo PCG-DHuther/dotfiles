@@ -1,3 +1,6 @@
+{{ if eq .chezmoi.os "windows"}}
+pager = "more"
+{{- else}}
 pager = "less -R"
 encryption = "gpg"
 
