@@ -6,187 +6,190 @@ metadata:
     processor:
       identifier: dscv3
 resources:
-- name: winget_PowerShell
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: Install PowerShell
+- type: Microsoft.WinGet/Package
+  name: winget_PowerShell
   properties:
     id: Microsoft.PowerShell
     source: winget
     acceptAgreements: true
-  winget:
-      securityContext: "elevated"
-- name: winget_Starship
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install Starship"
+    description: Install PowerShell
+    winget:
+      securityContext: elevated
+- type: Microsoft.WinGet/Package
+  name: winget_Starship
   properties:
-    id: "Starship.Starship"
-    source: "winget"
+    id: Starship.Starship
+    source: winget
     acceptAgreements: true
-  winget:
-    securityContext: "elevated"
-- name: winget_MasterPackager
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install MasterPackager"
+    description: Install Starship
+    winget:
+      securityContext: elevated
+- type: Microsoft.WinGet/Package
+  name: winget_MasterPackager
   properties:
-    id: "MasterPackager.MasterPackager"
-    source: "winget"
+    id: MasterPackager.MasterPackager
+    source: winget
     acceptAgreements: true
-  winget:
-      securityContext: "elevated"
-- name: winget_Microsoft.WSL
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install Windows Subsystem for Linux"
+    description: Install MasterPackager
+    winget:
+      securityContext: elevated
+- type: Microsoft.WinGet/Package
+  name: winget_Microsoft.WSL
   properties:
-    id: "Microsoft.WSL"
+    id: Microsoft.WSL
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-  winget:
-      securityContext: "elevated"
-- name: winget_AutoHotkey.AutoHotkey
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install AutoHotkey"
+    description: Install Windows Subsystem for Linux
+    winget:
+      securityContext: elevated
+- type: Microsoft.WinGet/Package
+  name: winget_AutoHotkey.AutoHotkey
   properties:
-    id: "AutoHotkey.AutoHotkey"
+    id: AutoHotkey.AutoHotkey
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_Greenshot
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install Greenshot"
+    description: Install AutoHotkey
+- type: Microsoft.WinGet/Package
+  name: winget_Greenshot
   properties:
-    id: "Greenshot.Greenshot"
+    id: Greenshot.Greenshot
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_Nushell
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install Nushell"
+    description: Install Greenshot
+- type: Microsoft.WinGet/Package
+  name: winget_Nushell
   properties:
-    id: "Nushell.Nushell"
+    id: Nushell.Nushell
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_7zip.7zip
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install 7zip"
+    description: Install Nushell
+- type: Microsoft.WinGet/Package
+  name: winget_7zip.7zip
   properties:
-    id: "7zip.7zip"
+    id: 7zip.7zip
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_IntuneDebugToolkit
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install IntuneDebugToolkit"
+    description: Install 7zip
+- type: Microsoft.WinGet/Package
+  name: winget_IntuneDebugToolkit
   properties:
-    id: "MSEndpointMgr.IntuneDebugToolkit"
+    id: MSEndpointMgr.IntuneDebugToolkit
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_GitVersion
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install GitVersion"
+    description: Install IntuneDebugToolkit
+- type: Microsoft.WinGet/Package
+  name: winget_GitVersion
   properties:
-    id: "GitTools.GitVersion"
+    id: GitTools.GitVersion
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_SysinternalsSuite
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install Sysinternals Suite"
+    description: Install GitVersion
+- type: Microsoft.WinGet/Package
+  name: winget_SysinternalsSuite
   properties:
-    id: "Microsoft.Sysinternals.Suite"
+    id: Microsoft.Sysinternals.Suite
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_RegistryChangesView
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install RegistryChangesView"
+    description: Install Sysinternals Suite
+- type: Microsoft.WinGet/Package
+  name: winget_RegistryChangesView
   properties:
-    id: "NirSoft.RegistryChangesView"
+    id: NirSoft.RegistryChangesView
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_UninstallView
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install UninstallView"
+    description: Install RegistryChangesView
+- type: Microsoft.WinGet/Package
+  name: winget_UninstallView
   properties:
-    id: "NirSoft.UninstallView"
+    id: NirSoft.UninstallView
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_rsteube.Carapace
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install Carapace"
+    description: Install UninstallView
+- type: Microsoft.WinGet/Package
+  name: winget_rsteube.Carapace
   properties:
-    id: "rsteube.Carapace"
+    id: rsteube.Carapace
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_twpayne.chezmoi
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install chezmoi"
+    description: Install Carapace
+- type: Microsoft.WinGet/Package
+  name: winget_twpayne.chezmoi
   properties:
-    id: "twpayne.chezmoi"
+    id: twpayne.chezmoi
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_VSCodeInsiders
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install VS Code Insiders"
+    description: Install chezmoi
+- type: Microsoft.WinGet/Package
+  name: winget_VSCodeInsiders
   properties:
-    id: "Microsoft.VisualStudioCode.Insiders"
+    id: Microsoft.VisualStudioCode.Insiders
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_PowerToys
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install Microsoft PowerToys"
+    description: Install VS Code Insiders
+- type: Microsoft.WinGet/Package
+  name: winget_PowerToys
   properties:
-    id: "Microsoft.PowerToys"
+    id: Microsoft.PowerToys
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_WindowsTerminal
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install Windows Terminal"
+    description: Install Microsoft PowerToys
+- type: Microsoft.WinGet/Package
+  name: winget_WindowsTerminal
   properties:
-    id: "Microsoft.WindowsTerminal"
-    source: "winget"
-
-- name: winget_Debian
-  type: Microsoft.WinGet/Package
+    id: Microsoft.WindowsTerminal
+    source: winget
   metadata:
-    description: "Install Debian WSL"
+    description: Install Windows Terminal
+- type: Microsoft.WinGet/Package
+  name: winget_Debian
+  dependsOn:
+  - winget_Microsoft.WSL
   properties:
-    id: "Debian.Debian"
+    id: Debian.Debian
     installMode: silent
-    source: "winget"
+    source: winget
     acceptAgreements: true
-- name: winget_AlpineWSL
-  type: Microsoft.WinGet/Package
   metadata:
-    description: "Install Alpine WSL"
+    description: Install Debian WSL
+- type: Microsoft.WinGet/Package
+  name: winget_AlpineWSL
+  dependsOn:
+  - winget_Microsoft.WSL
   properties:
-    id: "9P804CRF0395"
+    id: 9P804CRF0395
     installMode: silent
-    source: "msstore"
+    source: msstore
     acceptAgreements: true
+  metadata:
+    description: Install Alpine WSL
