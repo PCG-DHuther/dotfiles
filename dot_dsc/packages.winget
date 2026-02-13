@@ -36,6 +36,17 @@ resources:
     acceptAgreements: true
   winget:
       securityContext: "elevated"
+- name: winget_Microsoft.WSL
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: "Install Windows Subsystem for Linux"
+  properties:
+    id: "Microsoft.WSL"
+    installMode: silent
+    source: "winget"
+    acceptAgreements: true
+  winget:
+      securityContext: "elevated"
 - name: winget_AutoHotkey.AutoHotkey
   type: Microsoft.WinGet/Package
   metadata:
@@ -160,15 +171,7 @@ resources:
   properties:
     id: "Microsoft.WindowsTerminal"
     source: "winget"
-- name: winget_Microsoft.WSL
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Windows Subsystem for Linux"
-  properties:
-    id: "Microsoft.WSL"
-    installMode: silent
-    source: "winget"
-    acceptAgreements: true
+
 - name: winget_Debian
   type: Microsoft.WinGet/Package
   metadata:
