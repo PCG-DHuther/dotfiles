@@ -51,6 +51,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install AutoHotkey
+    winget:
+      securityContext: current
   properties:
     id: AutoHotkey.AutoHotkey
     installMode: silent
@@ -60,6 +62,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install Greenshot
+    winget:
+      securityContext: current
   properties:
     id: Greenshot.Greenshot
     installMode: silent
@@ -69,6 +73,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install Nushell
+    winget:
+      securityContext: current
   properties:
     id: Nushell.Nushell
     installMode: silent
@@ -78,6 +84,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install 7zip
+    winget:
+      securityContext: current
   properties:
     id: 7zip.7zip
     installMode: silent
@@ -87,6 +95,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install IntuneDebugToolkit
+    winget:
+      securityContext: current
   properties:
     id: MSEndpointMgr.IntuneDebugToolkit
     installMode: silent
@@ -96,6 +106,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install GitVersion
+    winget:
+      securityContext: current
   properties:
     id: GitTools.GitVersion
     installMode: silent
@@ -105,6 +117,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install Sysinternals Suite
+    winget:
+      securityContext: current
   properties:
     id: Microsoft.Sysinternals.Suite
     installMode: silent
@@ -114,6 +128,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install RegistryChangesView
+    winget:
+      securityContext: current
   properties:
     id: NirSoft.RegistryChangesView
     installMode: silent
@@ -123,6 +139,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install UninstallView
+    winget:
+      securityContext: current
   properties:
     id: NirSoft.UninstallView
     installMode: silent
@@ -132,6 +150,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install Carapace
+    winget:
+      securityContext: current
   properties:
     id: rsteube.Carapace
     installMode: silent
@@ -141,6 +161,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install chezmoi
+    winget:
+      securityContext: current
   properties:
     id: twpayne.chezmoi
     installMode: silent
@@ -149,16 +171,20 @@ resources:
 - name: winget_WinMerge
   type: Microsoft.WinGet/Package
   metadata:
-      description: Install WinMerge
+    description: Install WinMerge
+    winget:
+      securityContext: current
   properties:
-  id: WinMerge.WinMerge
-  installMode: silent
-  source: winget
-  acceptAgreements: true
+    id: WinMerge.WinMerge
+    installMode: silent
+    source: winget
+    acceptAgreements: true
 - name: winget_VSCodeInsiders
   type: Microsoft.WinGet/Package
   metadata:
     description: Install VS Code Insiders
+    winget:
+      securityContext: current
   properties:
     id: Microsoft.VisualStudioCode.Insiders
     installMode: silent
@@ -168,6 +194,8 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install Microsoft PowerToys
+    winget:
+      securityContext: current
   properties:
     id: Microsoft.PowerToys
     installMode: silent
@@ -177,15 +205,19 @@ resources:
   type: Microsoft.WinGet/Package
   metadata:
     description: Install Windows Terminal
+    winget:
+      securityContext: current
   properties:
     id: Microsoft.WindowsTerminal
     source: winget
 - name: winget_Debian
   type: Microsoft.WinGet/Package
-  metadata:
-    description: Install Debian WSL
   dependsOn:
   - winget_WSL
+  metadata:
+    description: Install Debian WSL
+    winget:
+      securityContext: current
   properties:
     id: Debian.Debian
     installMode: silent
@@ -193,10 +225,12 @@ resources:
     acceptAgreements: true
 - name: winget_AlpineWSL
   type: Microsoft.WinGet/Package
-  metadata:
-    description: Install Alpine WSL
   dependsOn:
   - winget_WSL
+  metadata:
+    description: Install Alpine WSL
+    winget:
+      securityContext: current
   properties:
     id: 9P804CRF0395
     installMode: silent
