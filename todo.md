@@ -1,12 +1,13 @@
--[ ] Figure out how to handle the instructions.md files. Using the template feature and also symlinking doesn't seem like it will have any way to work properly. Maybe I just use VS Code syncing for VS Code things?
--[ ] diff-command                not set; possibly use WinMerge?
--[ ] merge-command               vimdiff not found in $PATH; possibly use WinMerge?
--[ ] age-command                 age not found in $PATH
--[ ] gpg-command                 gpg not found in $PATH
--[ ] pinentry-command            not set
--[ ] bitwarden-command           bw not found in $PATH
--[ ] bitwarden-secrets-command   bws not found in $PATH
--[ ] keeper-command              keeper not found in $PATH
--[ ] vault-command               vault not found in $PATH
--[ ] secret-command              not set
--[x] symlink                     symlink A required privilege is not held by the client.
+- [ ] Decide on a method for installing Delugia/CaskaydiaCoveNF
+- [ ] Figure out how to handle the instructions.md files. Using the template feature and also symlinking doesn't seem like it will have any way to work properly. Maybe I just use VS Code syncing for VS Code things?
+- [ ] diff-command                not set; possibly use WinMerge?
+- [ ] merge-command               vimdiff not found in $PATH; possibly use WinMerge?
+- [ ] age-command                 age not found in $PATH
+- [ ] gpg-command                 gpg not found in $PATH
+- [ ] pinentry-command            not set
+- [ ] bitwarden-command           bw not found in $PATH
+- [ ] bitwarden-secrets-command   bws not found in $PATH
+- [ ] keeper-command              keeper not found in $PATH
+- [ ] vault-command               vault not found in $PATH
+- [ ] secret-command              not set
+- [x] symlink                     symlink A required privilege is not held by the client.
