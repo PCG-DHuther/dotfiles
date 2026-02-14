@@ -55,38 +55,63 @@
         },
         "list": [
             {
-                "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore",
+                "colorScheme": "Ros\u00e9 Pine Moon",
+                "font": {
+                    "face": "Cascadia Code"
+                },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-                "hidden": false
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "name": "Windows PowerShell",
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false
+                "hidden": false,
+                "name": "Windows PowerShell"
             },
             {
-                "name": "Nushell",
-                "source": "nu",
                 "guid": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
-                "hidden": false
+                "hidden": false,
+                "name": "Nushell",
+                "source": "nu"
             },
             {
-                "source": "Windows.Terminal.Azure",
-                "name": "Azure Cloud Shell",
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
             },
             {
-                "name": "Command Prompt",
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false
+                "hidden": false,
+                "name": "Command Prompt"
             }
         ]
     },
     "schemes": [
+        {
+            "name": "TokyoNight",
+            "black": "#363b54",
+            "red": "#f7768e",
+            "green": "#41a6b5",
+            "yellow": "#e0af68",
+            "blue": "#7aa2f7",
+            "purple": "#bb9af7",
+            "cyan": "#7dcfff",
+            "white": "#787c99",
+            "brightBlack": "#363b54",
+            "brightRed": "#f7768e",
+            "brightGreen": "#41a6b5",
+            "brightYellow": "#e0af68",
+            "brightBlue": "#7aa2f7",
+            "brightPurple": "#bb9af7",
+            "brightCyan": "#7dcfff",
+            "brightWhite": "#acb0d0",
+            "background": "#16161e",
+            "foreground": "#787c99"
+        },
         {
             "background": "#303446",
             "black": "#51576D",
