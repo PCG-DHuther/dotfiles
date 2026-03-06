@@ -47,6 +47,26 @@ resources:
     installMode: silent
     source: winget
     acceptAgreements: true
+- name: winget_WiXCLI
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install WiX CLI tools
+    winget:
+      securityContext: elevated
+  properties:
+    id: WiXToolset.WiXCLI
+    source: winget
+    acceptAgreements: true
+- name: winget_WiXToolset
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install WiX Toolset
+    winget:
+      securityContext: elevated
+  properties:
+    id: WiXToolset.WiXToolset
+    source: winget
+    acceptAgreements: true
 - name: winget_AutoHotkey.AutoHotkey
   type: Microsoft.WinGet/Package
   metadata:
