@@ -2,6 +2,7 @@
 
 format = """
 $os\
+$shell\
 $username\
 $directory\
 $git_branch\
@@ -17,8 +18,8 @@ $scala\
 $python\
 $time\n  \
 $cmd_duration\
-# $line_break\
-# $character
+$line_break\
+$character
 """
 
 palette = "rose-pine"
@@ -77,7 +78,7 @@ use_12hr = true
 
 [username]
 disabled = false
-format = "[](fg:overlay)[ 󰧱 $user ]($style)[](fg:overlay) "
+format = "[](fg:overlay)[ $user ]($style)[](fg:overlay) "
 show_always = true
 style_root = "bg:overlay fg:iris"
 style_user = "bg:overlay fg:iris"
