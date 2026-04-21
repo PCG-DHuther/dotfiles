@@ -45,34 +45,6 @@ pine = '#31748f'
 foam = '#9ccfd8'
 iris = '#c4a7e7'
 
-# format = """
-# [](red)\
-# $os\
-# $username\
-# [](bg:peach fg:red)\
-# $directory\
-# [](bg:yellow fg:peach)\
-# $git_branch\
-# $git_status\
-# [](fg:yellow bg:green)\
-# $c\
-# $rust\
-# $golang\
-# $nodejs\
-# $php\
-# $java\
-# $kotlin\
-# $haskell\
-# $python\
-# [](fg:green bg:sapphire)\
-# $conda\
-# [](fg:sapphire bg:lavender)\
-# $time\
-# [ ](fg:lavender)\
-# $cmd_duration\
-# $line_break\
-# $character"""
-
 [directory]
 format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) "
 style = "bg:overlay fg:pine"
@@ -112,7 +84,7 @@ symbol = " "
 
 [time]
 disabled = false
-format = " [](fg:overlay)[ $time 󰴈 ]($style)[](fg:overlay)"
+format = " [](fg:overlay)[ $time ]($style)[](fg:overlay)"
 style = "bg:overlay fg:rose"
 time_format = "%I:%M%P"
 use_12hr = true
