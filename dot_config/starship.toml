@@ -1,37 +1,38 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](love)\
+$os\
+$shell\
 $username\
-[](fg:love bg:rose)\
-[](fg:rose bg:gold)\
-[](fg:gold bg:foam)\
-[](fg:foam bg:pine)\
-[](fg:pine bg:iris)\
-[](iris)
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$c\
+$elixir\
+$elm\
+$golang\
+$java\
+$rust\
+$scala\
+$python\
+$time\n  \
+$cmd_duration\
+$line_break\
+$character
 """
 
+# experiment
 # format = """
-# $os\
-# $shell\
-# $username\
-# $directory\
-# $git_branch\
-# $git_status\
+# [](fg:iris)\
+# [](fg:iris bg:pine)\
 # $fill\
-# $c\
-# $elixir\
-# $elm\
-# $golang\
-# $java\
-# $rust\
-# $scala\
-# $python\
-# $time\n  \
-# $cmd_duration\
-# $line_break\
-# $character
+# [](fg:pine bg:foam)\
+# [](fg:rose bg:gold)\
+# [](fg:gold bg:foam)\
+# [](fg:foam bg:pine)\
 # """
+
 
 palette = "rose-pine"
 
