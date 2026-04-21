@@ -3,11 +3,11 @@
 format = """
 [](love)\
 $username\
-[](rose)\
-[](gold)\
-[](foam)\
-[](pine)\
-[](lavender)
+[](fg:love bg:rose)\
+[](fg:rose bg:gold)\
+[](fg:gold bg:foam)\
+[](fg:foam bg:pine)\
+[](fg:pine bg:lavender)
 """
 
 # format = """
