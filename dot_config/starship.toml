@@ -1,26 +1,36 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-$os\
-$shell\
+[](love)\
 $username\
-$directory\
-$git_branch\
-$git_status\
-$fill\
-$c\
-$elixir\
-$elm\
-$golang\
-$java\
-$rust\
-$scala\
-$python\
-$time\n  \
-$cmd_duration\
-$line_break\
-$character
+[](rose)\
+[](gold)\
+[](foam)\
+[](pine)\
+[](lavender)
 """
+
+# format = """
+# $os\
+# $shell\
+# $username\
+# $directory\
+# $git_branch\
+# $git_status\
+# $fill\
+# $c\
+# $elixir\
+# $elm\
+# $golang\
+# $java\
+# $rust\
+# $scala\
+# $python\
+# $time\n  \
+# $cmd_duration\
+# $line_break\
+# $character
+# """
 
 palette = "rose-pine"
 
@@ -33,7 +43,33 @@ pine = '#31748f'
 foam = '#9ccfd8'
 iris = '#c4a7e7'
 
-
+# format = """
+# [](red)\
+# $os\
+# $username\
+# [](bg:peach fg:red)\
+# $directory\
+# [](bg:yellow fg:peach)\
+# $git_branch\
+# $git_status\
+# [](fg:yellow bg:green)\
+# $c\
+# $rust\
+# $golang\
+# $nodejs\
+# $php\
+# $java\
+# $kotlin\
+# $haskell\
+# $python\
+# [](fg:green bg:sapphire)\
+# $conda\
+# [](fg:sapphire bg:lavender)\
+# $time\
+# [ ](fg:lavender)\
+# $cmd_duration\
+# $line_break\
+# $character"""
 
 [directory]
 format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) "
