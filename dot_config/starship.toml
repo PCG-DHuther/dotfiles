@@ -33,10 +33,7 @@ pine = '#31748f'
 foam = '#9ccfd8'
 iris = '#c4a7e7'
 
-[shell]
-disabled = false
-powershell_indicator = 'posh'
-pwsh_indicator = 'pwsh'
+
 
 [directory]
 format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) "
@@ -55,15 +52,21 @@ truncation_symbol = "…/"
 
 [os]
 disabled = false
-style = "bg:red fg:crust"
+style = "bg:overlay fg:iris"
 
 [os.symbols]
-Debian = "󰣚"
-Alpine = ""
-Linux = "󰌽"
-Ubuntu = "󰕈"
-Windows = ""
-Macos = "󰀵"
+Debian = "󰣚 "
+Alpine = " "
+Linux = "󰌽 "
+Ubuntu = "󰕈 "
+Windows = " "
+Macos = "󰀵 "
+
+[shell]
+disabled = false
+powershell_indicator = '󰨊 '
+pwsh_indicator = ' '
+style = "bg:overlay fg:foam"
 
 [fill]
 style = "fg:overlay"
