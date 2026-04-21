@@ -63,7 +63,7 @@ truncation_symbol = "…/"
 [os]
 disabled = false
 style = "bg:iris fg:overlay"
-format = "[ ](bg:overlay fg:iris)[ ($symbol) ][ ](bg:overlay fg:iris)"
+format = "[ ](bg:overlay fg:iris)[ $symbol ]($style)[ ](bg:overlay fg:iris)"
 
 [os.symbols]
 Debian = "󰣚 "
