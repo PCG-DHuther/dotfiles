@@ -2,13 +2,13 @@
 	email = 248734066+PCG-DHuther@users.noreply.github.com
 	name = David Huther
 
-# os specific
+# os-specific settings
 {{ if eq .chezmoi.os "windows"}}
 [core]
-autocrlf=true
+    autocrlf=true
 {{- else}}
 [core]
-autocrlf input
+    autocrlf input
 #{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 	# WSL-specific code
 #{{   end }}
