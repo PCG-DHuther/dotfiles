@@ -62,7 +62,8 @@ truncation_symbol = "…/"
 
 [os]
 disabled = false
-style = "bg:overlay fg:iris"
+style = "bg:iris fg:overlay"
+format = "[ ](bg:overlay fg:iris)[ $os ][ ](bg:overlay fg:iris)"
 
 [os.symbols]
 Debian = "󰣚 "
@@ -75,7 +76,7 @@ Macos = "󰀵 "
 [shell]
 disabled = false
 powershell_indicator = '󰨊 '
-pwsh_indicator = ' '
+pwsh_indicator = ' '
 style = "bg:overlay fg:foam"
 
 [fill]
