@@ -10,5 +10,5 @@ Try {
     Write-Error -Message $_.Exception.Message
     Exit 1
 } Finally {
-    Exit 0david.huther@pcg.com
+    Exit 0
 }
