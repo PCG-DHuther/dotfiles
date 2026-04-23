@@ -11,3 +11,4 @@
 - [ ] vault-command               vault not found in $PATH
 - [ ] secret-command              not set
 - [x] symlink                     symlink A required privilege is not held by the client.
+- [ ] Teams: Open application in background

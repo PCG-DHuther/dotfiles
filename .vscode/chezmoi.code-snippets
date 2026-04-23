@@ -1,0 +1,18 @@
+{
+    "WinGet Package DSC Declaration": {
+        "prefix": "wgpkg",
+        "body": [
+            "- name: winget_${1:FriendlyPackageName}",
+            "  type: Microsoft.WinGet/Package",
+            "  metadata:",
+            "    description: Install ${2:FriendlyPackageNameWithSpaces}",
+            "    winget:",
+            "      securityContext: ${3|current,elevated|}",
+            "  properties:",
+            "    id: ${4:PackageId}",
+            "    installMode: silent",
+            "    source: ${5|winget,msstore|}",
+            "    acceptAgreements: true"
+        ]
+    }
+}

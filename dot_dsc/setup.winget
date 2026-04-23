@@ -1,0 +1,114 @@
+# Created with WinGet Studio - v0.100.329.0
+
+$schema: https://raw.githubusercontent.com/PowerShell/DSC/main/schemas/2023/08/config/document.json
+metadata:
+  winget:
+    processor:
+      identifier: dscv3
+resources:
+- name: winget_PowerShell
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install PowerShell
+    winget:
+      securityContext: elevated
+  properties:
+    id: Microsoft.PowerShell
+    source: winget
+    acceptAgreements: true
+- name: winget_Starship
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install Starship
+    winget:
+      securityContext: elevated
+  properties:
+    id: Starship.Starship
+    source: winget
+    acceptAgreements: true
+- name: winget_AutoHotkey.AutoHotkey
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install AutoHotkey
+    winget:
+      securityContext: current
+  properties:
+    id: AutoHotkey.AutoHotkey
+    installMode: silent
+    source: winget
+    acceptAgreements: true
+- name: winget_7zip.7zip
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install 7zip
+    winget:
+      securityContext: current
+  properties:
+    id: 7zip.7zip
+    installMode: silent
+    source: winget
+    acceptAgreements: true
+- name: winget_GitVersion
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install GitVersion
+    winget:
+      securityContext: current
+  properties:
+    id: GitTools.GitVersion
+    installMode: silent
+    source: winget
+    acceptAgreements: true
+- name: winget_rsteube.Carapace
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install Carapace
+    winget:
+      securityContext: current
+  properties:
+    id: rsteube.Carapace
+    installMode: silent
+    source: winget
+    acceptAgreements: true
+- name: winget_twpayne.chezmoi
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install chezmoi
+    winget:
+      securityContext: current
+  properties:
+    id: twpayne.chezmoi
+    installMode: silent
+    source: winget
+    acceptAgreements: true
+- name: winget_VSCodeInsiders
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install VS Code Insiders
+    winget:
+      securityContext: current
+  properties:
+    id: Microsoft.VisualStudioCode.Insiders
+    installMode: silent
+    source: winget
+    acceptAgreements: true
+- name: winget_WindowsTerminal
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install Windows Terminal
+    winget:
+      securityContext: current
+  properties:
+    id: Microsoft.WindowsTerminal
+    source: winget
+- name: winget_KeeperSecretsManager
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install Keeper Secrets Manager
+    winget:
+      securityContext: elevated
+  properties:
+    id: KeeperSecurity.KeeperSecretsManager
+    installMode: silent
+    source: winget
+    acceptAgreements: true

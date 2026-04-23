@@ -6,26 +6,6 @@ metadata:
     processor:
       identifier: dscv3
 resources:
-- name: winget_PowerShell
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: Install PowerShell
-    winget:
-      securityContext: elevated
-  properties:
-    id: Microsoft.PowerShell
-    source: winget
-    acceptAgreements: true
-- name: winget_Starship
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: Install Starship
-    winget:
-      securityContext: elevated
-  properties:
-    id: Starship.Starship
-    source: winget
-    acceptAgreements: true
 - name: winget_MasterPackager
   type: Microsoft.WinGet/Package
   metadata:
@@ -44,17 +24,6 @@ resources:
       securityContext: elevated
   properties:
     id: Microsoft.WSL
-    installMode: silent
-    source: winget
-    acceptAgreements: true
-- name: winget_AutoHotkey.AutoHotkey
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: Install AutoHotkey
-    winget:
-      securityContext: current
-  properties:
-    id: AutoHotkey.AutoHotkey
     installMode: silent
     source: winget
     acceptAgreements: true
@@ -80,17 +49,6 @@ resources:
     installMode: silent
     source: winget
     acceptAgreements: true
-- name: winget_7zip.7zip
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: Install 7zip
-    winget:
-      securityContext: current
-  properties:
-    id: 7zip.7zip
-    installMode: silent
-    source: winget
-    acceptAgreements: true
 - name: winget_IntuneDebugToolkit
   type: Microsoft.WinGet/Package
   metadata:
@@ -99,17 +57,6 @@ resources:
       securityContext: current
   properties:
     id: MSEndpointMgr.IntuneDebugToolkit
-    installMode: silent
-    source: winget
-    acceptAgreements: true
-- name: winget_GitVersion
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: Install GitVersion
-    winget:
-      securityContext: current
-  properties:
-    id: GitTools.GitVersion
     installMode: silent
     source: winget
     acceptAgreements: true
@@ -146,28 +93,6 @@ resources:
     installMode: silent
     source: winget
     acceptAgreements: true
-- name: winget_rsteube.Carapace
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: Install Carapace
-    winget:
-      securityContext: current
-  properties:
-    id: rsteube.Carapace
-    installMode: silent
-    source: winget
-    acceptAgreements: true
-- name: winget_twpayne.chezmoi
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: Install chezmoi
-    winget:
-      securityContext: current
-  properties:
-    id: twpayne.chezmoi
-    installMode: silent
-    source: winget
-    acceptAgreements: true
 - name: winget_WinMerge
   type: Microsoft.WinGet/Package
   metadata:
@@ -176,17 +101,6 @@ resources:
       securityContext: current
   properties:
     id: WinMerge.WinMerge
-    installMode: silent
-    source: winget
-    acceptAgreements: true
-- name: winget_VSCodeInsiders
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: Install VS Code Insiders
-    winget:
-      securityContext: current
-  properties:
-    id: Microsoft.VisualStudioCode.Insiders
     installMode: silent
     source: winget
     acceptAgreements: true
@@ -201,15 +115,6 @@ resources:
     installMode: silent
     source: winget
     acceptAgreements: true
-- name: winget_WindowsTerminal
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: Install Windows Terminal
-    winget:
-      securityContext: current
-  properties:
-    id: Microsoft.WindowsTerminal
-    source: winget
 - name: winget_Debian
   type: Microsoft.WinGet/Package
   dependsOn:
@@ -235,4 +140,37 @@ resources:
     id: 9P804CRF0395
     installMode: silent
     source: msstore
+    acceptAgreements: true
+- name: winget_KeeperPasswordManager
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install Keeper Password Manager
+    winget:
+      securityContext: current
+  properties:
+    id: 9N040SRQ0S8C
+    installMode: silent
+    source: msstore
+    acceptAgreements: true
+- name: winget_Bitwarden
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install Bitwarden
+    winget:
+      securityContext: current
+  properties:
+    id: 9PJSDV0VPK04
+    installMode: silent
+    source: msstore
+    acceptAgreements: true
+- name: winget_BitwardenCLI
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install Bitwarden CLI
+    winget:
+      securityContext: current
+  properties:
+    id: Bitwarden.CLI
+    installMode: silent
+    source: winget
     acceptAgreements: true
