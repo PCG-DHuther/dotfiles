@@ -1,5 +1,9 @@
 {{ if eq .chezmoi.os "windows"}}
 pager = "more.com /E /S /T4"
+encryption = "age"
+[age]
+    identity = "$HOME/.age/age.key"
+    recipient = "age1vu0tuhr5m6f7adhwx5yyw2q4wvp0u2ananjx4swmp7hlvm709dzqs049gz"
 {{- else}}
 pager = "less -R"
 encryption = "gpg"
