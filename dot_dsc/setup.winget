@@ -112,3 +112,14 @@ resources:
     installMode: silent
     source: winget
     acceptAgreements: true
+- name: winget_AGE
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install age
+    winget:
+      securityContext: current
+  properties:
+    id: FiloSottile.age
+    installMode: silent
+    source: winget
+    acceptAgreements: true
