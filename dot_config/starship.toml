@@ -18,7 +18,8 @@ $scala\
 $python\
 $time\n  \
 $cmd_duration\
-$character
+$character\
+$linebreak
 """
 
 # experiment
