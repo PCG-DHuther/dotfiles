@@ -1,12 +1,29 @@
 {{ if eq .chezmoi.os "windows"}}
-pager = "more.com /E /S /T4"
+
 encryption = "age"
 [age]
     identity = "$HOME/.age/age.key"
     recipient = "age1vu0tuhr5m6f7adhwx5yyw2q4wvp0u2ananjx4swmp7hlvm709dzqs049gz"
+
+[diff]
+    command = "code-insiders"
+    args = ["--wait", "--diff"]
+[merge]
+    command = "cmd"
+args = [
+    "-c",
+    "cp {{ .Target | quote }} {{ printf \"%s.base\" .Target | quote }} && code --new-window --wait --merge {{ .Destination | quote }} {{ .Target | quote }} {{ printf \"%s.base\" .Target | quote }} {{ .Source | quote }}",
+]
+[pager]
+    command = "more.com"
+    args = ["/E" "/S" "/T4"]
+
 {{- else}}
-pager = "less -R"
+pager = "less"
+pagerArgs = ["-R"]
 encryption = "gpg"
+[gpg]
+    recipient = "david.huther@pcg.com"
 {{ end }}
 
 [add]
@@ -21,9 +38,6 @@ encryption = "gpg"
     autoCommit = true
     autoPush = true
 
-[gpg]
-    recipient = "david.huther@pcg.com"
-
 [hooks.edit-config-template.post]
-    args = ["init"]
     command = "chezmoi"
+    args = ["init"]
