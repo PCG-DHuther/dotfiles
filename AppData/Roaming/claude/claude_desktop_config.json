@@ -43,8 +43,11 @@
     },
     "mcpServers": {
         "obsidian": {
-            "command": "npx",
+            "command": "cmd",
             "args": [
+                "/c",
+                "npx",
+                "-y",
                 "@bitbonsai/mcpvault@latest",
                 "C:/Users/049734DH/OneDrive - Performance Contracting Group/Documents/Obsidian/vault1"
             ]
