@@ -45,7 +45,7 @@
         "obsidian": {
             "command": "npx",
             "args": [
-                "@bitbonsai/mcpvault@0.12.1",
+                "@bitbonsai/mcpvault@latest",
                 "C:\\Users\\049734DH\\OneDrive - Performance Contracting Group\\Documents\\Obsidian\\vault1"
             ]
         }
