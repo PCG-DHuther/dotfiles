@@ -1,4 +1,16 @@
 {
+    "mcpServers": {
+        "obsidian": {
+            "command": "cmd",
+            "args": [
+                "/c",
+                "npx",
+                "-y",
+                "@bitbonsai/mcpvault@latest",
+                "C:/Users/049734DH/OneDrive - Performance Contracting Group/Documents/Obsidian/vault1"
+            ]
+        }
+    },
     "coworkUserFilesPath": "C:\\Users\\049734DH\\Claude",
     "preferences": {
         "launchPreviewPersistedWorkspaces": [],
@@ -6,7 +18,7 @@
         "coworkScheduledTasksEnabled": true,
         "coworkHipaaRestricted": false,
         "ccdScheduledTasksEnabled": true,
-        "sidebarMode": "chat",
+        "sidebarMode": "task",
         "bypassPermissionsGateByAccount": {
             "1aa5e058-1b1c-4648-a383-65da22a2790e": true
         },
@@ -36,21 +48,9 @@
             },
             "dframe-local-slice": {
                 "pinnedOrder": [],
-                "customGroupAssignments": {},
-                "customGroupOrder": {}
-            }
-        }
-    },
-    "mcpServers": {
-        "obsidian": {
-            "command": "cmd",
-            "args": [
-                "/c",
-                "npx",
-                "-y",
-                "@bitbonsai/mcpvault@latest",
-                "C:/Users/049734DH/OneDrive - Performance Contracting Group/Documents/Obsidian/vault1"
-            ]
+                "homeProjectsPinnedOrder": []
+            },
+            "dframe-group-scopes": {}
         }
     }
 }
