@@ -14,6 +14,7 @@ resources:
       securityContext: elevated
   properties:
     id: Microsoft.PowerShell
+    installMode: silent
     source: winget
     acceptAgreements: true
 - name: winget_Starship
@@ -24,6 +25,7 @@ resources:
       securityContext: elevated
   properties:
     id: Starship.Starship
+    installMode: silent
     source: winget
     acceptAgreements: true
 - name: winget_AutoHotkey.AutoHotkey
@@ -92,6 +94,7 @@ resources:
     installMode: silent
     source: winget
     acceptAgreements: true
+
 - name: winget_WindowsTerminal
   type: Microsoft.WinGet/Package
   metadata:
@@ -100,7 +103,9 @@ resources:
       securityContext: current
   properties:
     id: Microsoft.WindowsTerminal
+    installMode: silent
     source: winget
+    acceptAgreements: true
 - name: winget_KeeperSecretsManager
   type: Microsoft.WinGet/Package
   metadata:
