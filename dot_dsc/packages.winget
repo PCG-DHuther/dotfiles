@@ -14,6 +14,18 @@ resources:
       securityContext: elevated
   properties:
     id: MasterPackager.MasterPackager
+    installMode: silent
+    source: winget
+    acceptAgreements: true
+- name: winget_jujutsu
+  type: Microsoft.WinGet/Package
+  metadata:
+    description: Install jujutsu
+    winget:
+      securityContext: current
+  properties:
+    id: jj-vsc.jj
+    installMode: silent
     source: winget
     acceptAgreements: true
 - name: winget_WSL
