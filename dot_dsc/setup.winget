@@ -6,17 +6,6 @@ metadata:
     processor:
       identifier: dscv3
 resources:
-- name: winget_PowerShell
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: Install PowerShell
-    winget:
-      securityContext: elevated
-  properties:
-    id: Microsoft.PowerShell
-    installMode: silent
-    source: winget
-    acceptAgreements: true
 - name: winget_Starship
   type: Microsoft.WinGet/Package
   metadata:
