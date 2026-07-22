@@ -1,4 +1,14 @@
 
+{{ if eq .chezmoi.os "windows"}}
+encryption = "age"
+pager = "more.com"
+pagerArgs = ["/E", "/S", "/T4"]
+{{- else}}
+encryption = "gpg"
+pager = "less"
+pagerArgs = ["-R"]
+{{ end }}
+
 [add]
     secrets = "error"
 
@@ -7,25 +17,16 @@
     recipient = "age1vu0tuhr5m6f7adhwx5yyw2q4wvp0u2ananjx4swmp7hlvm709dzqs049gz"
 
 [diff]
-{{ if eq .chezmoi.os "windows"}}
     command = "code-insiders"
     args = ["--wait", "--diff"]
-{{- else}}
-{{ end }}
 
 [edit]
     command = "code-insiders"
     args = ["--wait"]
     apply = true
 
-{{ if eq .chezmoi.os "windows"}}
-encryption = "age"
-{{- else}}
-encryption = "gpg"
-
 [gpg]
     recipient = "david.huther@pcg.com"
-{{ end }}
 
 [hooks.edit-config-template.post]
     command = "chezmoi"
@@ -38,11 +39,3 @@ encryption = "gpg"
 [merge]
     command = "code-insiders"
     args = ["--new-window", "--wait", "--merge"]
-
-{{ if eq .chezmoi.os "windows"}}
-pager = "more.com"
-pagerArgs = ["/E", "/S", "/T4"]
-{{- else}}
-pager = "less"
-pagerArgs = ["-R"]
-{{ end }}
