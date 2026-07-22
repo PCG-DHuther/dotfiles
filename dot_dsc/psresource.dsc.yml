@@ -37,5 +37,9 @@ resources:
           version: 1.24.0
         - name: ShowPSAst
           version: 1.0
+        # - name: Toml
+        #   version: 0.0.1
         - name: Utilities
           version: 0.10.6
+        # - name: Yaml
+        #   version: 0.0.5
