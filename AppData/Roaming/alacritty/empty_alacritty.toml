@@ -15,4 +15,8 @@ size = 14
 # glyph_offset
 # builtin_box_drawing
 
-[colors]
+[cursor]
+style = { "Beam", "On" }
+
+[terminal]
+# shell =
