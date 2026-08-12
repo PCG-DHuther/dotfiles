@@ -10,5 +10,5 @@ size = 14
 style = { shape = "Beam", blinking = "On" }
 
 [terminal]
-shell = "C:/Program Files/PowerShell/7/pwsh"
-#shell = { program = "C:/Program Files/PowerShell/7/pwsh", args = ["-NoWelcome"] }
+shell = { program = "C:/Program Files/PowerShell/7/pwsh", args = ["-NoLogo"] }
+#shell = "C:/Program Files/PowerShell/7/pwsh"
