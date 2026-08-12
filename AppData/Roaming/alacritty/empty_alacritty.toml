@@ -16,7 +16,7 @@ size = 14
 # builtin_box_drawing
 
 [cursor]
-style = { "Beam", "On" }
+style = { shape = "Beam", blinking = "On" }
 
 [terminal]
 # shell =
