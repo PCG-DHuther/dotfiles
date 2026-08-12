@@ -1,0 +1,18 @@
+[general]
+import = ["~/AppData/Roaming/alacritty/rose-pine-default.toml"]
+live_config_reload = true
+
+[env]
+
+[window]
+
+[scrolling]
+
+[font]
+nomal = { family = "AtkynsonMono Nerd Font", style = "Regular" }
+size = 14
+# offset
+# glyph_offset
+# builtin_box_drawing
+
+[colors]
