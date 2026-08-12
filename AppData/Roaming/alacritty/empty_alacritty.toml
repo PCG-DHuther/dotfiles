@@ -2,21 +2,13 @@
 import = ["~/AppData/Roaming/alacritty/rose-pine-default.toml"]
 live_config_reload = true
 
-[env]
-
-[window]
-
-[scrolling]
-
 [font]
 normal = { family = "AtkynsonMono Nerd Font", style = "Regular" }
 size = 14
-# offset
-# glyph_offset
-# builtin_box_drawing
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
 
 [terminal]
-shell = { program = "C:/Program Files/PowerShell/7/pwsh.exe", args = ["-NoWelcome"] }
+shell = "C:/Program Files/PowerShell/7/pwsh"
+#shell = { program = "C:/Program Files/PowerShell/7/pwsh", args = ["-NoWelcome"] }
