@@ -1,0 +1,23 @@
+[format.rules]
+  date-time-delimiter             = "preserve"
+  indent-style                    = "space"
+  indent-sub-tables               = true
+  indent-table-key-value-pairs    = true
+  indent-width                    = 2
+  key-value-equals-sign-alignment = true
+  string-quote-style              = "preserve"
+  trailing-comment-alignment      = true
+
+[schema]
+  enabled = true
+  strict  = true
+  catalog = {
+    paths = [
+      "tombi://www.schemastore.org/api/json/catalog.json",
+      "https://www.schemastore.org/api/json/catalog.json",
+    ]
+  }
+
+[[schemas]]
+  path    = "tombi://www.schemastore.org/tombi.json"
+  include = ["tombi.toml"]
