@@ -13,6 +13,7 @@ If (-not (Get-Module -ListAvailable -Name Fonts)) {
         Where-Object -Property CompanyName -EQ -Value PSModule.io |
         Install-Module -Force -Scope CurrentUser
 }
+Import-Module -Force -Name Microsoft.PowerShell.Utility
 Import-Module -Force -Name Fonts
 
 If (-not (Get-Font -Scope AllUsers -Name 'Delugia*' )) {
