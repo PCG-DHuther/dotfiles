@@ -1,0 +1,24 @@
+[credential]
+    helper = manager
+
+[credential "https://dev.azure.com"]
+    useHttpPath = true
+
+[init]
+    defaultBranch = main
+
+[user]
+	email = 248734066+PCG-DHuther@users.noreply.github.com
+	name = David Huther
+
+# os-specific settings
+{{ if eq .chezmoi.os "windows"}}
+[core]
+    autocrlf=true
+{{- else}}
+[core]
+    autocrlf input
+#{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+	# WSL-specific code
+#{{   end }}
+{{- end }}

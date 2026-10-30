@@ -1,0 +1,13 @@
+Host github.com
+  User git
+  Port 22
+  IdentitiesOnly=yes
+  PreferredAuthentications publickey
+  PasswordAuthentication no
+  IdentityFile ~/.ssh/id_ed25519 # CMD
+  # BASH
+  # IdentityFile ~/.ssh/id_ed25519
+  # ZSH
+  # IdentityFile ~/.ssh/id_ed25519
+  # WSL
+  # IdentityFile /mnt/c/Users/049734DH/.ssh/id_ed25519
